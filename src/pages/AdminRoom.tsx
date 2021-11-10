@@ -3,7 +3,7 @@ import deleteImg from '../assets/images/delete.svg';
 import checkImg from '../assets/images/check.svg';
 import answerImg from '../assets/images/answer.svg';
 
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 
 import { Button } from '../components/Button';
 import { Question } from '../components/Question';
@@ -57,7 +57,9 @@ export function AdminRoom() {
     <div id='page-room'>
       <header>
         <div className='content'>
-          <img src={logoImg} alt="Letmeask" />
+          <Link to='/'>
+            <img src={logoImg} alt="Letmeask" />
+          </Link>
           <div>
             <RoomCode code={roomId} />
             <Button onClick={handleEndRoom} isOutlined >Encerrar sala</Button>
