@@ -11,9 +11,10 @@ import { RoomCode } from '../components/RoomCode';
 
 import { useRoom } from '../hooks/useRoom';
 
-import '../styles/room.scss';
 import { ref, remove, update } from '@firebase/database';
 import { database } from '../services/firebase';
+
+import '../styles/room.scss';
 
 type RoomParams = {
   id: string;
